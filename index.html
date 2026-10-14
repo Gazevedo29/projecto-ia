@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Internistas IA: apoio ao estudo clínico e ao raciocínio diagnóstico.">
+  <title>Internistas IA — Assistente Clínico</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">+</div>
+        <div><strong>Internistas IA</strong><span>Assistente clínico</span></div>
+      </div>
+      <button id="newChat" class="new-chat" type="button">＋ Nova conversa</button>
+      <p class="side-label">EXEMPLOS PARA COMEÇAR</p>
+      <button class="suggestion" data-prompt="Organiza uma abordagem clínica para um adulto com dispneia aguda, incluindo sinais de alarme e diagnóstico diferencial.">Dispneia aguda</button>
+      <button class="suggestion" data-prompt="Explica uma abordagem sistemática à anemia: classificação, causas, exames iniciais e interpretação.">Abordagem à anemia</button>
+      <button class="suggestion" data-prompt="Apresenta uma abordagem ao doente com febre, incluindo anamnese, exame físico, diagnóstico diferencial e exames.">Doente com febre</button>
+      <button class="suggestion" data-prompt="Cria um caso clínico de neurologia para eu resolver passo a passo, sem revelar o diagnóstico inicialmente.">Caso clínico interativo</button>
+      <div class="sidebar-note">Uso educativo e apoio ao raciocínio clínico.</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">+</span><strong>Internistas IA</strong></div>
+        <span class="status"><span class="status-dot"></span> Assistente de estudo clínico</span>
+      </header>
+
+      <section id="welcome" class="welcome">
+        <div class="welcome-icon">✚</div>
+        <p class="eyebrow">MEDICINA • FASE CLÍNICA</p>
+        <h1>Raciocina clinicamente.<br><span>Aprende continuamente.</span></h1>
+        <p class="welcome-copy">Explora diagnósticos diferenciais, exame físico, exames complementares e princípios de tratamento em várias especialidades médicas.</p>
+        <div class="quick-grid">
+          <button class="quick-card" data-prompt="Como abordar um doente com dor torácica na urgência? Inclui sinais de alarme e diagnósticos que não posso perder."><b>♡ Dor torácica</b><span>Abordagem e prioridades</span></button>
+          <button class="quick-card" data-prompt="Explica a interpretação clínica de um hemograma completo, com padrões frequentes e limitações."><b>▤ Hemograma</b><span>Interpretação laboratorial</span></button>
+          <button class="quick-card" data-prompt="Faz um caso clínico de insuficiência cardíaca e guia-me por perguntas, exame, exames e diagnóstico diferencial."><b>⌁ Cardiologia</b><span>Treino com caso clínico</span></button>
+          <button class="quick-card" data-prompt="Resume a abordagem inicial ao doente com défice neurológico focal súbito, incluindo prioridades e exames."><b>⌘ Neurologia</b><span>Raciocínio e urgência</span></button>
+        </div>
+      </section>
+
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="message">Escreva a sua pergunta médica</label>
+        <textarea id="message" rows="1" maxlength="12000" placeholder="Faça uma pergunta clínica..." required></textarea>
+        <button id="sendButton" type="submit" aria-label="Enviar pergunta">↑</button>
+        <div class="composer-hint">Não inclua dados identificáveis de doentes. Confirme decisões clínicas com fontes e protocolos atualizados.</div>
+      </form>
+      <footer>Conteúdo educativo. Não substitui avaliação clínica, protocolos locais nem aconselhamento médico individual.</footer>
+    </main>
+  </div>
+</body>
+</html>
